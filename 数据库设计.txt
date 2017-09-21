@@ -1,0 +1,21 @@
+create table cj
+(
+cj varchar(50) not null primary key,
+zt varchar(50) not null
+)
+create table parking
+(
+users varchar(50) not null,
+date1 varchar(50) not null,
+cj varchar(50) not null foreign key,
+zt varchar(50) not null,
+qrcode varchar(50) ,
+cj references cj(cj)
+)
+create table log
+(
+users varchar(50) not null,
+date1 varchar(50) not null,
+date2 varchar(50) not null,
+cj varchar(50) not null
+)
